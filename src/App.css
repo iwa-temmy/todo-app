@@ -74,3 +74,17 @@ main .item span {
 .active {
   border-bottom: 3px solid #2F80ED;
 }
+
+@media only screen and (max-width: 576px) {
+  .App {
+    width: 100vw;
+  }
+
+  .horizontal-line {
+    top: 114px;
+  }
+
+  main .add-items {
+    padding: 1rem;
+  }
+}
