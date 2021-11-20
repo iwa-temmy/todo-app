@@ -50,6 +50,9 @@ main .add-items button {
 
 main .item{
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   width: 100%;
+}
+main .item span{
+  margin-left: 0.5rem;
 }
