@@ -12,6 +12,7 @@ body {
   width: 35%;
   margin: 0 auto;
   margin-top: 3rem;
+  position: relative;
 }
 
 main .tabs {
@@ -21,6 +22,10 @@ main .tabs {
   align-items: center;
   margin: 1rem auto;
   margin-top: 2rem;
+}
+main .tabs span{
+  padding: 0 0.8rem;
+   padding-bottom: 0.7rem;
 }
 
 main .tabs span:nth-child(2) {
@@ -48,11 +53,22 @@ main .add-items button {
   color: #fff;
 }
 
-main .item{
+main .item {
   display: flex;
   align-items: center;
   width: 100%;
 }
-main .item span{
+
+main .item span {
   margin-left: 0.5rem;
+}
+
+.horizontal-line {
+  position: absolute;
+  top: 52%;
+  width: 100%;
+}
+
+.active {
+  border-bottom: 4px solid #2F80ED;
 }
