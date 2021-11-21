@@ -67,7 +67,7 @@ main .item-completed {
   align-items: center;
   justify-content: space-between;
   margin: 1rem 0;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 main .item-completed span {

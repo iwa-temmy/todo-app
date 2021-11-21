@@ -26,11 +26,11 @@ const Item = (props) => {
                 </div>
                 <span onClick={DeleteTask} className="delete"><MdIcons.MdOutlineDeleteOutline /></span>
               </div>
-              <div className="delete-all">
-                <button onClick={deleteAllTasks}><MdIcons.MdOutlineDeleteOutline /> delete all</button>
-              </div>
             </div>
           ))}
+          <div className="delete-all">
+            <button onClick={deleteAllTasks}><MdIcons.MdOutlineDeleteOutline /> delete all</button>
+          </div>
         </>)
         :
         ""}
