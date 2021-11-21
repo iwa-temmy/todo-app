@@ -15,10 +15,20 @@ const Item = (props) => {
     ))}</>) : currentTab === 'active' ? (<> {activeTasks?.map((task, index) => (<div className="item" key={index}>
       <input type="checkbox" onChange={() => CompleteTask(index)} checked={task?.state === 'completed' ? true : false}/>
       <span style={{textDecoration: task?.state === "completed" ? 'line-through' : 'none'}}>{task?.title}</span>
-    </div>))} </>) : currentTab === 'completed' ? (<>{completedTasks?.map((task, index) => (<div className="item" key={index}>
-      <input type="checkbox" onChange={() => CompleteTask(index)} checked={task?.state === 'completed' ? true : false}/>
-      <span style={{textDecoration: task?.state === "completed" ? 'line-through' : 'none'}}>{task?.title}</span>
-    </div>))}</>) : ""}
+    </div>))} </>) : currentTab === 'completed' ? (
+    <>
+    {completedTasks?.map((task, index) => (
+    <div className="item-completed" key={index}>
+      <div>
+        <input type="checkbox" onChange={() => CompleteTask(index)} checked={task?.state === 'completed' ? true : false}/>
+        <span style={{textDecoration: task?.state === "completed" ? 'line-through' : 'none'}}>{task?.title}</span>
+      </div>
+      <button className="delete">delete</button>
+    </div>
+    ))}
+    </>) 
+    :
+     ""}
     </>
   )
 }
