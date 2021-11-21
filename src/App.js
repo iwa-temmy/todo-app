@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Item from './components/Item';
 import Tabs from './components/Tabs';
 import AddTask from './components/AddTask';
-import { useEffect } from 'react/cjs/react.development';
 
 function App() {
   const [currentTab, setcurrentTab] = useState("all");
