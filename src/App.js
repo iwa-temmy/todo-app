@@ -49,10 +49,7 @@ function App() {
     settasks(localData)
   }
   useEffect(() => {
-    const local = localStorage.getItem("tasks");
-    console.log(JSON.parse(local))
-    const localData = JSON.parse(local) === [] ? [] : JSON.parse(local);
-    settasks(localData);
+    fetchData();
   }, [])
   return (
     <div className="App">
