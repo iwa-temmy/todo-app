@@ -50,7 +50,8 @@ function App() {
   }
   useEffect(() => {
     const local = localStorage.getItem("tasks");
-    const localData = JSON.parse(local) === null ? [] : JSON.parse(local);
+    console.log(JSON.parse(local))
+    const localData = JSON.parse(local) === [] ? [] : JSON.parse(local);
     settasks(localData);
   }, [])
   return (
