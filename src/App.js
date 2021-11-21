@@ -10,10 +10,10 @@ function App() {
 
   console.log(tasks)
   const onTextChange = e => {
-    e.preventDefault()
     settitle(e.target.value)
   }
-  const AddTask = () => {
+  const AddTask = (e) => {
+    e.preventDefault();
     const newTasks = [...tasks, { title: title, state: "active" }]
     settasks(newTasks)
     settitle("")
@@ -31,10 +31,10 @@ function App() {
       <main>
         <Tabs currentTab={currentTab} setcurrentTab={setcurrentTab} />
         <hr className="horizontal-line" />
-        <div className="add-items">
-          <input placeholder="add details" name="task" value={title} onChange={onTextChange} />
-          <button onClick={AddTask}>Add</button>
-        </div>
+        <form onSubmit={AddTask} className="add-items">
+          <input placeholder="add details" name="task" value={title} required onChange={onTextChange} />
+          <button type="submit">Add</button>
+        </form>
         <Item tasks={tasks} CompleteTask={CompleteTask} currentTab={currentTab} />
       </main>
     </div >
