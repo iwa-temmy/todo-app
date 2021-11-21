@@ -5,6 +5,7 @@ const Item = (props) => {
   const { tasks, CompleteTask, currentTab, DeleteTask, deleteAllTasks } = props
   const activeTasks = tasks?.filter(task => task?.state === 'active');
   const completedTasks = tasks?.filter(task => task.state === 'completed')
+  console.log("comp", completedTasks)
   return (
     <>
       {currentTab === 'all' ? (<>{tasks?.map((task, index) => (
@@ -28,9 +29,9 @@ const Item = (props) => {
               </div>
             </div>
           ))}
-          <div className="delete-all">
+          {completedTasks.length !== 0 ? (<div className="delete-all">
             <button onClick={deleteAllTasks}><MdIcons.MdOutlineDeleteOutline /> delete all</button>
-          </div>
+          </div>) : ""}
         </>)
         :
         ""}
