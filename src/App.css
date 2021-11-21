@@ -70,6 +70,9 @@ main .item-completed{
 main .item-completed span{
   margin-left: 0.5rem;
 }
+main .item-completed .delete{
+  color: #BDBDBD;
+}
 
 main .item span {
   margin-left: 0.5rem;
@@ -83,6 +86,17 @@ main .item span {
 
 .active {
   border-bottom: 3px solid #2F80ED;
+}
+.delete-all{
+  text-align: right;
+  margin-right: 0.5rem;
+}
+.delete-all button{
+  padding: 8px 12px;
+  color: #fff;
+  background-color: #EB5757;
+  border: none;
+  border-radius: 4px;
 }
 
 @media only screen and (max-width: 576px) {
