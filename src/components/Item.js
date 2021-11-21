@@ -24,7 +24,7 @@ const Item = (props) => {
                   <input type="checkbox" checked={task?.state === 'completed' ? true : false} readOnly />
                   <span style={{ textDecoration: task?.state === "completed" ? 'line-through' : 'none' }}>{task?.title}</span>
                 </div>
-                <span onClick={DeleteTask} className="delete"><MdIcons.MdOutlineDeleteOutline /></span>
+                <span onClick={() => DeleteTask(index)} className="delete"><MdIcons.MdOutlineDeleteOutline /></span>
               </div>
             </div>
           ))}
