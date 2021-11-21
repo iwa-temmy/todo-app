@@ -11,8 +11,9 @@ body {
   text-align: center;
   width: 35%;
   margin: 0 auto;
-  margin-top: 3rem;
+  padding-top: 3rem;
   position: relative;
+  height: 90vh;
 }
 
 main .tabs {
@@ -60,17 +61,20 @@ main .item {
   width: 100%;
   margin: 1rem 0;
 }
-main .item-completed{
+
+main .item-completed {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 1rem 0;
   padding: 1rem;
 }
-main .item-completed span{
+
+main .item-completed span {
   margin-left: 0.5rem;
 }
-main .item-completed .delete{
+
+main .item-completed .delete {
   color: #BDBDBD;
 }
 
@@ -80,23 +84,36 @@ main .item span {
 
 .horizontal-line {
   position: absolute;
-  top: 97px;
+  top: 16.3%;
   width: 100%;
 }
 
 .active {
   border-bottom: 3px solid #2F80ED;
 }
-.delete-all{
+
+.delete-all {
   text-align: right;
   margin-right: 0.5rem;
 }
-.delete-all button{
+
+.delete-all button {
   padding: 8px 12px;
   color: #fff;
   background-color: #EB5757;
   border: none;
   border-radius: 4px;
+}
+
+footer {
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+}
+
+footer p {
+  text-align: center;
+  color: #A9A9A9;
 }
 
 @media only screen and (max-width: 576px) {
@@ -105,13 +122,18 @@ main .item span {
   }
 
   .horizontal-line {
-    top: 114px;
+    top: 22.3%;
   }
 
   main .add-items {
     padding: 1rem;
   }
+
   main .item {
     padding: 0 1.2rem;
+  }
+
+  footer {
+    left: 14%;
   }
 }

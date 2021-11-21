@@ -5,7 +5,6 @@ const Item = (props) => {
   const { tasks, CompleteTask, currentTab, DeleteTask, deleteAllTasks } = props
   const activeTasks = tasks?.filter(task => task?.state === 'active');
   const completedTasks = tasks?.filter(task => task.state === 'completed')
-  console.log('active', activeTasks);
   return (
     <>
       {currentTab === 'all' ? (<>{tasks?.map((task, index) => (
