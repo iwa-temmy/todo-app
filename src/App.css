@@ -28,6 +28,7 @@ main .tabs {
 main .tabs span {
   padding: 0 0.8rem;
   padding-bottom: 0.5rem;
+  cursor: pointer;
 }
 
 main .tabs span:nth-child(2) {
